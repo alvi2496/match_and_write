@@ -15,7 +15,7 @@ cat <<EOF >$PROJECT_PATH/activate.sh
 #!/bin/bash -i
 
 source ~/pyvirenvs/match_and_write/bin/activate
-./config/dependencies/install.sh
+pip install -r config/dependencies/install.txt
 EOF
 
 chmod 777 activate.sh
