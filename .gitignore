@@ -1,0 +1,7 @@
+*.log
+test.sh
+.vagrant/
+activate.sh
+data/*
+*__pycache__
+*.ipynb_checkpoints
