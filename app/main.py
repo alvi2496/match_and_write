@@ -1,13 +1,12 @@
 import pandas as pd
 import sys
-import re
 
 input = pd.read_excel('data/input.xlsx', headers=True)
 output = pd.DataFrame(columns = input.columns)
 
 for index, row in input.iterrows():
     for elements in row:
-        if( re.search(str(elements), (str(sys.argv[1])), re.IGNORECASE) ):
+        if(str(elements).lower().__contains__(str(sys.argv[1]).lower())):
             output = output.append(row)
             break
 
